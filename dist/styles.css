@@ -1,0 +1,60 @@
+:root {
+  --ink:#f0f3f2;
+  --dim:#acb9b7;
+  --line:#2b3838;
+  --green:#9deecc;
+  --panel:#161f21;
+  --base:#0e1517;
+}
+body { background:var(--base); color:var(--ink); font-family:Inter,system-ui,sans-serif; }
+a { color:var(--green); text-decoration:none; }
+a:hover { color:#defcef; text-decoration:underline; }
+:focus-visible { outline:2px solid var(--green); outline-offset:4px; }
+.skip { position:fixed; top:8px; left:8px; transform:translateY(-150%); z-index:5; padding:8px; background:var(--base); }
+.skip:focus { transform:none; }
+.top { position:sticky; top:0; z-index:2; min-height:66px; padding:10px clamp(16px,3vw,42px); display:flex; align-items:center; justify-content:space-between; background:#111a1c; border-bottom:1px solid var(--line); }
+.brand { display:flex; align-items:center; gap:12px; color:var(--ink); font-weight:700; }
+.brand span { border:1px solid #43695e; background:#1d3931; border-radius:8px; color:var(--green); font:700 16px ui-monospace,monospace; padding:8px; }
+.top-source { font-size:.875rem; }
+.shell { display:grid; grid-template-columns:280px minmax(0,1fr); }
+aside { position:sticky; top:66px; max-height:calc(100dvh - 66px); overflow:auto; padding:20px 16px; background:#111a1c; border-right:1px solid var(--line); }
+nav details + details { margin-top:9px; }
+nav summary { padding:8px 9px; font-size:.88rem; font-weight:650; }
+nav summary::marker { color:var(--green); }
+nav a { display:block; padding:7px 10px; margin:2px 0 2px 11px; border-radius:6px; font-size:.85rem; color:var(--dim); border-left:2px solid transparent; }
+nav a[aria-current] { background:#203932; color:var(--green); border-left-color:var(--green); }
+main { width:min(100%,1190px); margin:auto; padding:clamp(24px,5vw,69px); }
+.eyebrow { color:var(--green); font:600 .78rem ui-monospace,monospace; letter-spacing:.13em; text-transform:uppercase; }
+h1 { font-size:clamp(2.35rem,5.6vw,4.8rem); line-height:1.03; letter-spacing:-.055em; font-weight:740; margin:15px 0 21px; }
+.lede { max-width:65ch; color:#c3cfcd; font-size:1.12rem; line-height:1.7; margin-bottom:32px; }
+.panel { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:clamp(18px,3vw,29px); height:100%; }
+.panel h2 { font-size:1.16rem; margin-bottom:15px; }
+.panel p, .panel li { color:var(--dim); line-height:1.65; }
+.points { margin:0; padding-left:1.15rem; }
+.points li+li { margin-top:12px; }
+.points li::marker { color:var(--green); }
+.lab { background:#172321; border-color:#354943; }
+.demo-title { font-size:1rem; margin:.8rem 0 .5rem; }
+.display { background:#0f1919; border:1px solid #30413f; border-radius:10px; padding:15px; min-height:116px; }
+.signal { display:flex; flex-wrap:wrap; align-items:center; gap:7px; margin-bottom:12px; }
+.node { display:inline-block; font:600 .78rem ui-monospace,monospace; line-height:1.45; border:1px solid #3f6559; background:#203a33; color:#bbf5dd; padding:7px 9px; border-radius:5px; overflow-wrap:anywhere; max-width:100%; }
+.arrow { color:#86ac9f; }
+.display p { margin:0; font-size:.88rem; }
+.controls label { font-size:.88rem; }
+.form-range::-webkit-slider-thumb { background:var(--green); }
+.form-range::-moz-range-thumb { background:var(--green); }
+.sequence { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:25px; padding-top:20px; border-top:1px solid var(--line); }
+.btn-outline-light { --bs-btn-color:#c7d6d2; --bs-btn-border-color:#4a605b; }
+footer { font-size:.8rem; color:var(--dim); margin-top:42px; }
+@media (max-width:991.98px) {
+  .shell { display:block; }
+  aside { display:none; position:static; max-height:55vh; border-right:0; border-bottom:1px solid var(--line); }
+  aside.open { display:block; }
+}
+.gantt { display:flex; gap:4px; margin-bottom:12px; }
+.gantt .node { text-align:center; min-width:0; padding-inline:2px; }
+.gantt-B { background:#283e55; border-color:#456681; color:#cee8ff; }
+.gantt-C { background:#453820; border-color:#705934; color:#ffe8b8; }
+.memory-track { display:flex; margin-bottom:12px; min-height:28px; border-radius:5px; overflow:hidden; }
+.memory-track span { min-width:0; display:grid; place-items:center; overflow:hidden; color:#121f1c; background:#9deecc; font-size:.73rem; }
+.memory-track span+span { background:#769cb8; }
