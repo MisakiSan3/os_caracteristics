@@ -1,0 +1,18 @@
+# Dependencias y registros de herramientas locales
+node_modules/
+*.log
+
+# Configuración local
+.env
+.env.*
+!.env.example
+
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Archivos temporales
+*.swp
+*.tmp
