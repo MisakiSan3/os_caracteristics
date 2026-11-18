@@ -58,3 +58,11 @@ footer { font-size:.8rem; color:var(--dim); margin-top:42px; }
 .memory-track { display:flex; margin-bottom:12px; min-height:28px; border-radius:5px; overflow:hidden; }
 .memory-track span { min-width:0; display:grid; place-items:center; overflow:hidden; color:#121f1c; background:#9deecc; font-size:.73rem; }
 .memory-track span+span { background:#769cb8; }
+.summary { max-width:78ch; margin-bottom:30px; }
+.summary h2 { font-size:1.16rem; margin-bottom:12px; }
+.summary p { color:#c3cfcd; line-height:1.7; }
+.summary .lede { margin-bottom:12px; }
+.case { margin:16px 0; padding-left:14px; border-left:2px solid #4b7568; }
+.case h4 { font-size:.9rem; color:#c4e9db; margin-bottom:6px; }
+.case p { margin-bottom:12px; font-size:.93rem; }
+.case p:last-child { margin-bottom:0; }

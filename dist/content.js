@@ -29,7 +29,7 @@ const groups = [
       ['POSIX especifica interfaces comunes en sistemas tipo UNIX.', 'Windows API ofrece interfaces de programación propias de Windows.', 'Las llamadas al sistema cruzan de forma controlada al modo núcleo.'],
       'De la API al núcleo', [
         ['Abrir archivo','Aplicación › open() › Llamada al sistema › Descriptor','El núcleo devuelve un descriptor si puede abrir el archivo.'],
-        ['Consultar longitud','Aplicación › strlen() › Longitud','La biblioteca cuenta caracteres hasta el primer byte nulo. La operación no requiere una llamada al sistema.']]],
+        ['Consultar longitud','Aplicación › strlen() › Longitud','La biblioteca cuenta bytes hasta el primer byte nulo. La operación no requiere una llamada al sistema.']]],
     ['Operación del sistema', 'operacion-del-sistema-operativo', 'El arranque prepara el equipo y carga el núcleo. Durante la ejecución, el procesador distingue entre modos con distintos privilegios.',
       ['El firmware inicia el arranque y transfiere el control al cargador.', 'El núcleo ejecuta operaciones privilegiadas.', 'Una llamada al sistema o una interrupción puede transferir el control al núcleo.'],
       'Sigue el control del procesador', [

@@ -181,6 +181,7 @@ function renderTopic() {
   if (hash === 'topic') return;
   const index = Math.max(0, topics.findIndex(topic => topic.id === hash));
   const topic = topics[index];
+  const detail = expansion[topic.id];
   document.title = `${topic.title} · Sistemas operativos`;
   for (const link of nav.querySelectorAll('a')) {
     if (link.hash === `#${topic.id}`) {
@@ -195,15 +196,25 @@ function renderTopic() {
   view.innerHTML = `
     <div class="eyebrow">${topic.group}</div>
     <h1>${topic.title}</h1>
-    <p class="lede">${topic.summary}</p>
-    <div class="row g-3">
+    <section class="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Resumen</h2>
+      <p class="lede">${topic.summary}</p>
+      <p>${detail.summary}</p>
+    </section>
+    <div class="row g-3 align-items-start">
       <div class="col-xl-5"><section class="panel">
         <h2>Puntos importantes</h2>
-        <ul class="points">${topic.points.map(point => `<li>${point}</li>`).join('')}</ul>
+        <ul class="points">${[...topic.points, ...detail.points].map(point => `<li>${point}</li>`).join('')}</ul>
       </section></div>
       <div class="col-xl-7"><section class="panel lab">
         <h2>Ejemplo interactivo</h2>
         <h3 class="demo-title">${topic.example}</h3>
+        <div class="case">
+          <h4>Caso práctico</h4>
+          <p>${detail.scenario}</p>
+          <h4>Qué probar y cómo interpretarlo</h4>
+          <p>${detail.steps}</p>
+        </div>
         <div class="controls my-3"></div>
         <div class="display" aria-live="polite"></div>
       </section></div>
